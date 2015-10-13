@@ -44,7 +44,7 @@
           svg.selectAll("path")
             .data(layer_data.features.sort(function(a, b) { return a.properties.sort_key ? a.properties.sort_key - b.properties.sort_key : 0 }))
           .enter().append("path")
-            .attr("class", function(d) { var kind = d.properties.kind || ''; if(d.properties.boundary=='yes'){kind += '_boundary';} if(d.properties.label_position=='yes'){kind += '_label_position';} return layer + '-layer ' + kind; })
+            .attr("class", function(d) { var kind = d.properties.kind || ''; if(d.properties.boundary=='yes'){kind += '_boundary';} if(d.properties.label_placement=='yes'){kind += '_label_placement';} return layer + '-layer ' + kind; })
             .attr("d", tilePath );
         }
       });
