@@ -15,7 +15,7 @@
   window.renderTiles = function(d) {
     var svg = d3.select(this);
     var zoom = d[2];
-    this._xhr = d3.xhr("https://tile.mapzen.com/mapzen/vector/v1/all/" + zoom + "/" + d[0] + "/" + d[1] + ".mvt?api_key=vector-tiles-LM25tq4").responseType('arraybuffer').get(function(error, json) {
+    this._xhr = d3.xhr("https://tile.nextzen.org/tilezen/vector/v1/all/" + zoom + "/" + d[0] + "/" + d[1] + ".mvt?api_key=_HFpZl-VRLKQlgcvQzWTPA").responseType('arraybuffer').get(function(error, json) {
 
       var tile = new VectorTile( new pbf( new Uint8Array(json.response) ) );
       var extents = 4096;

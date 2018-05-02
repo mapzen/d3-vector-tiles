@@ -13,7 +13,8 @@
   window.renderTiles = function(d) {
     var svg = d3.select(this);
     var zoom = d[2];
-    this._xhr = d3.json("https://tile.mapzen.com/mapzen/vector/v1/all/" + zoom + "/" + d[0] + "/" + d[1] + ".json?api_key=vector-tiles-LM25tq4", function(error, data) {
+    this._xhr = d3.json("https://tile.nextzen.org/tilezen/vector/v1/all/" + zoom + "/" + d[0] + "/" + d[1] + ".json?api_key=_HFpZl-VRLKQlgcvQzWTPA", function(error, data) {
+
       var k = Math.pow(2, d[2]) * 256; // size of the world in pixels
 
       tilePath.projection()
